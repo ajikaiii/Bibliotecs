@@ -50,16 +50,6 @@ function mylib.hello()
    print('Hello World')
 end
 
-function EXPORTS.aboutme()
-
-    id = select(2, sampGetPlayerIdByCharHandle(PLAYER_PED))
-    sampAddChatMessage('Мой ID: '..id, -1)
-    sampAddChatMessage('Мой ник: '..sampGetPlayerNickname(id), -1)
-    sampAddChatMessage('Мой лвл: '..sampGetPlayerScore(id), -1)
-    sampAddChatMessage('Мой пинг: '..sampGetPlayerPing(id), -1)
-    sampAddChatMessage('Мое здоровье: '..sampGetPlayerHealth(id), -1)
-    sampAddChatMessage('Моя броня: '..sampGetPlayerArmor(id), -1)
-end
 
 function main()
     while not isSampAvailable() do wait(0) end
